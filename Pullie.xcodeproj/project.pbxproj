@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E264526A1898FA3F00C0C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26452691898FA3F00C0C44A /* Foundation.framework */; };
+		E264526C1898FA3F00C0C44A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526B1898FA3F00C0C44A /* CoreGraphics.framework */; };
+		E264526E1898FA3F00C0C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526D1898FA3F00C0C44A /* UIKit.framework */; };
+		E26452741898FA3F00C0C44A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E26452721898FA3F00C0C44A /* InfoPlist.strings */; };
+		E26452761898FA3F00C0C44A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E26452751898FA3F00C0C44A /* main.m */; };
+		E264527A1898FA3F00C0C44A /* PULAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E26452791898FA3F00C0C44A /* PULAppDelegate.m */; };
+		E264527C1898FA3F00C0C44A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264527B1898FA3F00C0C44A /* Images.xcassets */; };
+		E26452831898FA3F00C0C44A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26452821898FA3F00C0C44A /* XCTest.framework */; };
+		E26452841898FA3F00C0C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26452691898FA3F00C0C44A /* Foundation.framework */; };
+		E26452851898FA3F00C0C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526D1898FA3F00C0C44A /* UIKit.framework */; };
+		E264528D1898FA3F00C0C44A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E264528B1898FA3F00C0C44A /* InfoPlist.strings */; };
+		E264528F1898FA3F00C0C44A /* PullieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E264528E1898FA3F00C0C44A /* PullieTests.m */; };
+		E264529C1898FDB900C0C44A /* PULLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E264529B1898FDB900C0C44A /* PULLoginViewController.m */; };
+		E26452A3189908AF00C0C44A /* UIButton+PullieAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E26452A2189908AF00C0C44A /* UIButton+PullieAdditions.m */; };
+		E26452AA18991F5B00C0C44A /* Alef-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E26452A818991F1F00C0C44A /* Alef-Regular.ttf */; };
+		E26452AC1899229500C0C44A /* Alef-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E26452AB1899227600C0C44A /* Alef-Bold.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E26452861898FA3F00C0C44A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E264525E1898FA3F00C0C44A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E26452651898FA3F00C0C44A;
+			remoteInfo = Pullie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E26452661898FA3F00C0C44A /* Pullie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pullie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26452691898FA3F00C0C44A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E264526B1898FA3F00C0C44A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E264526D1898FA3F00C0C44A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E26452711898FA3F00C0C44A /* Pullie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pullie-Info.plist"; sourceTree = "<group>"; };
+		E26452731898FA3F00C0C44A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E26452751898FA3F00C0C44A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E26452771898FA3F00C0C44A /* Pullie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pullie-Prefix.pch"; sourceTree = "<group>"; };
+		E26452781898FA3F00C0C44A /* PULAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PULAppDelegate.h; sourceTree = "<group>"; };
+		E26452791898FA3F00C0C44A /* PULAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PULAppDelegate.m; sourceTree = "<group>"; };
+		E264527B1898FA3F00C0C44A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E26452811898FA3F00C0C44A /* PullieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26452821898FA3F00C0C44A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E264528A1898FA3F00C0C44A /* PullieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PullieTests-Info.plist"; sourceTree = "<group>"; };
+		E264528C1898FA3F00C0C44A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E264528E1898FA3F00C0C44A /* PullieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullieTests.m; sourceTree = "<group>"; };
+		E264529A1898FDB900C0C44A /* PULLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULLoginViewController.h; sourceTree = "<group>"; };
+		E264529B1898FDB900C0C44A /* PULLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULLoginViewController.m; sourceTree = "<group>"; };
+		E26452A1189908AF00C0C44A /* UIButton+PullieAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+PullieAdditions.h"; sourceTree = "<group>"; };
+		E26452A2189908AF00C0C44A /* UIButton+PullieAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+PullieAdditions.m"; sourceTree = "<group>"; };
+		E26452A818991F1F00C0C44A /* Alef-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alef-Regular.ttf"; sourceTree = "<group>"; };
+		E26452AB1899227600C0C44A /* Alef-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alef-Bold.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E26452631898FA3F00C0C44A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264526C1898FA3F00C0C44A /* CoreGraphics.framework in Frameworks */,
+				E264526E1898FA3F00C0C44A /* UIKit.framework in Frameworks */,
+				E264526A1898FA3F00C0C44A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264527E1898FA3F00C0C44A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26452831898FA3F00C0C44A /* XCTest.framework in Frameworks */,
+				E26452851898FA3F00C0C44A /* UIKit.framework in Frameworks */,
+				E26452841898FA3F00C0C44A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E264525D1898FA3F00C0C44A = {
+			isa = PBXGroup;
+			children = (
+				E264526F1898FA3F00C0C44A /* Pullie */,
+				E26452881898FA3F00C0C44A /* PullieTests */,
+				E26452681898FA3F00C0C44A /* Frameworks */,
+				E26452671898FA3F00C0C44A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E26452671898FA3F00C0C44A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E26452661898FA3F00C0C44A /* Pullie.app */,
+				E26452811898FA3F00C0C44A /* PullieTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E26452681898FA3F00C0C44A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E26452691898FA3F00C0C44A /* Foundation.framework */,
+				E264526B1898FA3F00C0C44A /* CoreGraphics.framework */,
+				E264526D1898FA3F00C0C44A /* UIKit.framework */,
+				E26452821898FA3F00C0C44A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E264526F1898FA3F00C0C44A /* Pullie */ = {
+			isa = PBXGroup;
+			children = (
+				E264529D1899066C00C0C44A /* Categories */,
+				E26452991898FBAF00C0C44A /* View Controllers */,
+				E26452981898FA5800C0C44A /* Application */,
+				E264527B1898FA3F00C0C44A /* Images.xcassets */,
+				E26452701898FA3F00C0C44A /* Supporting Files */,
+			);
+			path = Pullie;
+			sourceTree = "<group>";
+		};
+		E26452701898FA3F00C0C44A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E26452A918991F2200C0C44A /* Fonts */,
+				E26452711898FA3F00C0C44A /* Pullie-Info.plist */,
+				E26452721898FA3F00C0C44A /* InfoPlist.strings */,
+				E26452751898FA3F00C0C44A /* main.m */,
+				E26452771898FA3F00C0C44A /* Pullie-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E26452881898FA3F00C0C44A /* PullieTests */ = {
+			isa = PBXGroup;
+			children = (
+				E264528E1898FA3F00C0C44A /* PullieTests.m */,
+				E26452891898FA3F00C0C44A /* Supporting Files */,
+			);
+			path = PullieTests;
+			sourceTree = "<group>";
+		};
+		E26452891898FA3F00C0C44A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E264528A1898FA3F00C0C44A /* PullieTests-Info.plist */,
+				E264528B1898FA3F00C0C44A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E26452981898FA5800C0C44A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E26452781898FA3F00C0C44A /* PULAppDelegate.h */,
+				E26452791898FA3F00C0C44A /* PULAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		E26452991898FBAF00C0C44A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E264529A1898FDB900C0C44A /* PULLoginViewController.h */,
+				E264529B1898FDB900C0C44A /* PULLoginViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E264529D1899066C00C0C44A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E26452A1189908AF00C0C44A /* UIButton+PullieAdditions.h */,
+				E26452A2189908AF00C0C44A /* UIButton+PullieAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		E26452A918991F2200C0C44A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E26452AB1899227600C0C44A /* Alef-Bold.ttf */,
+				E26452A818991F1F00C0C44A /* Alef-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E26452651898FA3F00C0C44A /* Pullie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26452921898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "Pullie" */;
+			buildPhases = (
+				E26452621898FA3F00C0C44A /* Sources */,
+				E26452631898FA3F00C0C44A /* Frameworks */,
+				E26452641898FA3F00C0C44A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pullie;
+			productName = Pullie;
+			productReference = E26452661898FA3F00C0C44A /* Pullie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E26452801898FA3F00C0C44A /* PullieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26452951898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "PullieTests" */;
+			buildPhases = (
+				E264527D1898FA3F00C0C44A /* Sources */,
+				E264527E1898FA3F00C0C44A /* Frameworks */,
+				E264527F1898FA3F00C0C44A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E26452871898FA3F00C0C44A /* PBXTargetDependency */,
+			);
+			name = PullieTests;
+			productName = PullieTests;
+			productReference = E26452811898FA3F00C0C44A /* PullieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E264525E1898FA3F00C0C44A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PUL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ahmed Sulaiman";
+				TargetAttributes = {
+					E26452801898FA3F00C0C44A = {
+						TestTargetID = E26452651898FA3F00C0C44A;
+					};
+				};
+			};
+			buildConfigurationList = E26452611898FA3F00C0C44A /* Build configuration list for PBXProject "Pullie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E264525D1898FA3F00C0C44A;
+			productRefGroup = E26452671898FA3F00C0C44A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E26452651898FA3F00C0C44A /* Pullie */,
+				E26452801898FA3F00C0C44A /* PullieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E26452641898FA3F00C0C44A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26452AC1899229500C0C44A /* Alef-Bold.ttf in Resources */,
+				E26452AA18991F5B00C0C44A /* Alef-Regular.ttf in Resources */,
+				E26452741898FA3F00C0C44A /* InfoPlist.strings in Resources */,
+				E264527C1898FA3F00C0C44A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264527F1898FA3F00C0C44A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264528D1898FA3F00C0C44A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E26452621898FA3F00C0C44A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264529C1898FDB900C0C44A /* PULLoginViewController.m in Sources */,
+				E26452A3189908AF00C0C44A /* UIButton+PullieAdditions.m in Sources */,
+				E264527A1898FA3F00C0C44A /* PULAppDelegate.m in Sources */,
+				E26452761898FA3F00C0C44A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264527D1898FA3F00C0C44A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264528F1898FA3F00C0C44A /* PullieTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E26452871898FA3F00C0C44A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E26452651898FA3F00C0C44A /* Pullie */;
+			targetProxy = E26452861898FA3F00C0C44A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E26452721898FA3F00C0C44A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E26452731898FA3F00C0C44A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E264528B1898FA3F00C0C44A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E264528C1898FA3F00C0C44A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E26452901898FA3F00C0C44A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E26452911898FA3F00C0C44A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E26452931898FA3F00C0C44A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
+				INFOPLIST_FILE = "Pullie/Pullie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E26452941898FA3F00C0C44A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
+				INFOPLIST_FILE = "Pullie/Pullie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E26452961898FA3F00C0C44A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pullie.app/Pullie";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PullieTests/PullieTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E26452971898FA3F00C0C44A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pullie.app/Pullie";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
+				INFOPLIST_FILE = "PullieTests/PullieTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E26452611898FA3F00C0C44A /* Build configuration list for PBXProject "Pullie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26452901898FA3F00C0C44A /* Debug */,
+				E26452911898FA3F00C0C44A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E26452921898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "Pullie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26452931898FA3F00C0C44A /* Debug */,
+				E26452941898FA3F00C0C44A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E26452951898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "PullieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26452961898FA3F00C0C44A /* Debug */,
+				E26452971898FA3F00C0C44A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E264525E1898FA3F00C0C44A /* Project object */;
+}
