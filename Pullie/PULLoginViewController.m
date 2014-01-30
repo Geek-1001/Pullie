@@ -33,23 +33,27 @@
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     
+    self.passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(screenWidth/2 - 130, screenHeight/2 - 50, 260, 50)];
+    [self.passwordTextField setPlaceholder:@"Input password..."];
+    [self.passwordTextField setSecureTextEntry:YES];
+    [self.passwordTextField setTextAlignment:NSTextAlignmentCenter];
+    self.passwordTextField.delegate = self;
+    [self.passwordTextField.layer setBorderWidth:1.5f];
+    [self.passwordTextField.layer setBorderColor:[[UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1] CGColor] ];
+    [self.passwordTextField.layer setCornerRadius:3.5f];
+    [self.view addSubview: self.passwordTextField];
+    
     UIButton *loginButton = [UIButton pullieLoginButton];
     [loginButton setFrame:CGRectMake(screenWidth/2 - 70, screenHeight - 100, 140, 45)];
     [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal]; // learn more about localization!
+    [loginButton addTarget:self action:@selector(loginButtonClickListener) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
-    
-    UITextField *passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(screenWidth/2 - 130, screenHeight/2 - 50, 260, 50)];
-    [passwordTextField setPlaceholder:@"Input password..."];
-    [passwordTextField setSecureTextEntry:YES];
-    [passwordTextField setTextAlignment:NSTextAlignmentCenter];
-    passwordTextField.delegate = self;
-    
-    [passwordTextField.layer setBorderWidth:1.5f];
-    [passwordTextField.layer setBorderColor:[[UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1] CGColor] ];
-    [passwordTextField.layer setCornerRadius:3.5f];
-    
-    [self.view addSubview: passwordTextField];
-    
+}
+
+#pragma mark - listeners
+
+- (void)loginButtonClickListener {
+    NSString *password = [self.passwordTextField text];
 }
 
 #pragma mark - keyboard delegate methods
