@@ -1,3 +1,3 @@
 #Pullie
 
-Pullie - simple open source iOS app for easily manag your Pull Requests.
+**Pullie** is the simplest way to manage your pull request right from your phone!
