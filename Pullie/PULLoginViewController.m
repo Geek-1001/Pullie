@@ -45,23 +45,36 @@
     CGFloat passwordTextFieldCoordinateY = screenHeight/2 - textFieldHeight;
     CGFloat loginTextFieldCoordinateY = screenHeight/2 - textFieldHeight * 2;
     
-    self.passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(textFieldCoordinateX, passwordTextFieldCoordinateY, textFieldWidth, textFieldHeight)];
+    [self addLoginTextFieldWithWidth:textFieldWidth Height:textFieldHeight CoordinateX:textFieldCoordinateX CoordinateY:loginTextFieldCoordinateY];
+    [self addPasswordTextFieldWithWidth:textFieldWidth Height:textFieldHeight CoordinateX:textFieldCoordinateX CoordinateY:passwordTextFieldCoordinateY];
+    [self addLoginButtonWithWidth:loginButtonWidth Height:loginButtonHeight CoordinateX:loginButtonCoordinateX CoordinateY:loginButtonCoordinateY];
+    
+}
+
+#pragma mark - UI Initialization Methods
+
+- (void)addLoginTextFieldWithWidth:(CGFloat)width Height:(CGFloat)height CoordinateX:(CGFloat)coordinateX CoordinateY:(CGFloat)coordinateY {
+    self.loginTextField = [[UITextField alloc] initWithFrame:CGRectMake(coordinateX, coordinateY, width, height)];
+    [self.loginTextField setPlaceholder: @"Input Login..."];
+    [self.loginTextField setTextAlignment: NSTextAlignmentCenter];
+    [self.loginTextField setKeyboardType:UIKeyboardTypeEmailAddress];
+    self.loginTextField.delegate = self;
+    [self.view addSubview: self.loginTextField];
+}
+
+- (void)addPasswordTextFieldWithWidth:(CGFloat)width Height:(CGFloat)height CoordinateX:(CGFloat)coordinateX CoordinateY:(CGFloat)coordinateY {
+    self.passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(coordinateX, coordinateY, width, height)];
     [self.passwordTextField setPlaceholder: @"Input password..."];
     [self.passwordTextField setSecureTextEntry: YES];
     [self.passwordTextField setTextAlignment: NSTextAlignmentCenter];
     [self.passwordTextField setKeyboardType:UIKeyboardTypeDefault];
     self.passwordTextField.delegate = self;
     [self.view addSubview: self.passwordTextField];
-    
-    self.loginTextField = [[UITextField alloc] initWithFrame:CGRectMake(textFieldCoordinateX, loginTextFieldCoordinateY, textFieldWidth, textFieldHeight)];
-    [self.loginTextField setPlaceholder: @"Input Login..."];
-    [self.loginTextField setTextAlignment: NSTextAlignmentCenter];
-    [self.loginTextField setKeyboardType:UIKeyboardTypeEmailAddress];
-    self.loginTextField.delegate = self;
-    [self.view addSubview: self.loginTextField];
-    
+}
+
+- (void)addLoginButtonWithWidth:(CGFloat)width Height:(CGFloat)height CoordinateX:(CGFloat)coordinateX CoordinateY:(CGFloat)coordinateY {
     UIButton *loginButton = [UIButton pullieLoginButton];
-    [loginButton setFrame:CGRectMake(loginButtonCoordinateX, loginButtonCoordinateY, loginButtonWidth, loginButtonHeight)];
+    [loginButton setFrame:CGRectMake(coordinateX, coordinateY, width, height)];
     [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal]; // TODO: learn more about localization!
     [loginButton addTarget:self action:@selector(signIn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
