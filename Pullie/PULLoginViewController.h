@@ -10,6 +10,6 @@
 
 @interface PULLoginViewController : UIViewController
 
-@property UITextField* passwordTextField;
+@property (nonatomic, strong) UITextField *passwordTextField;
 
 @end

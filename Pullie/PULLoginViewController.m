@@ -33,37 +33,46 @@
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     
-    self.passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(screenWidth/2 - 130, screenHeight/2 - 50, 260, 50)];
+    CGFloat loginButtonWidth = 140.0;
+    CGFloat loginButtonHeight = 45.0;
+    CGFloat loginButtonCoordinateX = screenWidth/2 - loginButtonWidth/2;
+    CGFloat loginButtonCoordinateY = screenHeight - 100;
+    
+    CGFloat passwordTextFieldWidth = 260.0;
+    CGFloat passwordTextFieldHeight = 50.0;
+    CGFloat passwordTextFieldCoordinateX = screenWidth/2 - passwordTextFieldWidth/2;
+    CGFloat passwordTextFieldCoordinateY = screenHeight/2 - passwordTextFieldHeight;
+    
+    self.passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(passwordTextFieldCoordinateX, passwordTextFieldCoordinateY, passwordTextFieldWidth, passwordTextFieldHeight)];
     [self.passwordTextField setPlaceholder:@"Input password..."];
     [self.passwordTextField setSecureTextEntry:YES];
     [self.passwordTextField setTextAlignment:NSTextAlignmentCenter];
     self.passwordTextField.delegate = self;
-    [self.passwordTextField.layer setBorderWidth:1.5f];
-    [self.passwordTextField.layer setBorderColor:[[UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1] CGColor] ];
-    [self.passwordTextField.layer setCornerRadius:3.5f];
     [self.view addSubview: self.passwordTextField];
     
     UIButton *loginButton = [UIButton pullieLoginButton];
-    [loginButton setFrame:CGRectMake(screenWidth/2 - 70, screenHeight - 100, 140, 45)];
-    [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal]; // learn more about localization!
-    [loginButton addTarget:self action:@selector(loginButtonClickListener) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton setFrame:CGRectMake(loginButtonCoordinateX, loginButtonCoordinateY, loginButtonWidth, loginButtonHeight)];
+    [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal]; // TODO: learn more about localization!
+    [loginButton addTarget:self action:@selector(startLoginProcess) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
 }
 
-#pragma mark - listeners
+#pragma mark - Actions
 
-- (void)loginButtonClickListener {
+- (void)startLoginProcess {
     NSString *password = [self.passwordTextField text];
+    NSLog(password);
+    // TODO: check if login and password are correct
 }
 
-#pragma mark - keyboard delegate methods
+#pragma mark - UITextFieldDelegate Methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
 
-#pragma mark - memory management methods
+#pragma mark - Memory Management Methods
 
 - (void)didReceiveMemoryWarning
 {
