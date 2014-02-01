@@ -16,6 +16,8 @@
 
 @implementation PULLoginViewController
 
+NSString *API_URL = @"https://api.github.com/user";
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -84,9 +86,28 @@
 
 - (void)signIn {
     NSString *password = [self.passwordTextField text];
-    NSLog(password);
-    // TODO: check if login and password are correct
+    NSString *username = [self.loginTextField text];
+    
+    NSString *authenticationTokenString = [NSString stringWithFormat:@"%@:%@", username, password];
+    NSData *authenticationTokenData = [authenticationTokenString dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *authenticationTokenStringEncoded = [authenticationTokenData base64EncodedStringWithOptions:0];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:API_URL]];
+    [request setValue:[NSString stringWithFormat:@"Basic %@", authenticationTokenStringEncoded] forHTTPHeaderField:@"Authorization"];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request completionHandler:signInHandler] resume];
+    
+
 }
+
+#pragma mark - URL Session Handler
+
+void (^signInHandler)(NSData *data, NSURLResponse *response, NSError *error) = ^(NSData *data, NSURLResponse *response, NSError *error){
+    NSString *jsonResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", jsonResponse);
+};
 
 #pragma mark - UITextFieldDelegate Methods
 
