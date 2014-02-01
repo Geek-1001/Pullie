@@ -98,15 +98,29 @@ NSString *API_URL = @"https://api.github.com/user";
     
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithRequest:request completionHandler:signInHandler] resume];
-    
-
 }
 
 #pragma mark - URL Session Handler
 
-void (^signInHandler)(NSData *data, NSURLResponse *response, NSError *error) = ^(NSData *data, NSURLResponse *response, NSError *error){
-    NSString *jsonResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", jsonResponse);
+void (^signInHandler)(NSData *data, NSURLResponse *response, NSError *error) = ^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    NSInteger statusCode = [httpResponse statusCode];
+    NSInteger loginSuccessfulCode = 200;
+    
+    NSString *alertViewTitle;
+    NSString *alertViewMessage;
+    if(statusCode == loginSuccessfulCode) {
+        alertViewTitle = @"Congratulate!";
+        alertViewMessage = @"You've logged in successfully";
+    } else {
+        alertViewTitle = @"Sorry!";
+        alertViewMessage = @"Incorrect username or password";
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertViewTitle message:alertViewMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    });
 };
 
 #pragma mark - UITextFieldDelegate Methods
