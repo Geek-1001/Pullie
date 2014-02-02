@@ -75,17 +75,55 @@
 - (void)addLoginButtonWithWidth:(CGFloat)width Height:(CGFloat)height CoordinateX:(CGFloat)coordinateX CoordinateY:(CGFloat)coordinateY {
     UIButton *loginButton = [UIButton pullieLoginButton];
     [loginButton setFrame:CGRectMake(coordinateX, coordinateY, width, height)];
-    [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal]; // TODO: learn more about localization!
+    [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(signIn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
+}
+
+- (void)showAlertViewWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle andMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
+        [alertView show];
+    });
 }
 
 #pragma mark - Actions
 
 - (void)signIn {
     NSString *password = [self.passwordTextField text];
-    NSLog(password);
-    // TODO: check if login and password are correct
+    NSString *username = [self.loginTextField text];
+    
+    NSString *authenticationTokenString = [NSString stringWithFormat:@"%@:%@", username, password];
+    NSString *authenticationTokenStringEncoded = [self getBase64EncodedString:authenticationTokenString];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"https://api.github.com/user"]];
+    [request setValue:[NSString stringWithFormat:@"Basic %@", authenticationTokenStringEncoded] forHTTPHeaderField:@"Authorization"];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        NSInteger statusCode = [httpResponse statusCode];
+        NSInteger loginSuccessfulCode = 200;
+        NSString *alertViewTitle;
+        NSString *alertViewMessage;
+        if(statusCode == loginSuccessfulCode) {
+            alertViewTitle = @"Congratulate!";
+            alertViewMessage = @"You've logged in successfully";
+        } else {
+            alertViewTitle = @"Sorry!";
+            alertViewMessage = @"Incorrect username or password";
+        }
+        [self showAlertViewWithTitle:alertViewTitle cancelButtonTitle:@"OK" andMessage:alertViewMessage];
+    }] resume];
+}
+
+#pragma mark - NSString Encode Methods 
+
+- (NSString *)getBase64EncodedString:(NSString *)string {
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedString = [data base64EncodedStringWithOptions:0];
+    return encodedString;
 }
 
 #pragma mark - UITextFieldDelegate Methods

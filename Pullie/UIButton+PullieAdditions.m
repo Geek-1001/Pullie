@@ -12,7 +12,7 @@
 
 // http://stackoverflow.com/questions/7464446/whats-wrong-with-uicolor-clr-uicolor-colorwithred1-0-green1-0-blue1-0-al [UIColor colorWithRed...] ISSUE!
 + (UIButton *)pullieLoginButton {
-    UIButton *loginButton = [[[self alloc] initWithFrame:CGRectZero] autorelease];
+    UIButton *loginButton = [[self alloc] initWithFrame:CGRectZero];
     [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     loginButton.titleLabel.font = [UIFont fontWithName:@"Alef-Bold" size:15.5f];
     [loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
