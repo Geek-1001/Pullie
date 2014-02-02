@@ -16,8 +16,6 @@
 
 @implementation PULLoginViewController
 
-NSString *API_URL = @"https://api.github.com/user";
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -77,9 +75,16 @@ NSString *API_URL = @"https://api.github.com/user";
 - (void)addLoginButtonWithWidth:(CGFloat)width Height:(CGFloat)height CoordinateX:(CGFloat)coordinateX CoordinateY:(CGFloat)coordinateY {
     UIButton *loginButton = [UIButton pullieLoginButton];
     [loginButton setFrame:CGRectMake(coordinateX, coordinateY, width, height)];
-    [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal]; // TODO: learn more about localization!
+    [loginButton setTitle:@"L O G I N" forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(signIn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
+}
+
+- (void)showAlertViewWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle andMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
+        [alertView show];
+    });
 }
 
 #pragma mark - Actions
@@ -89,39 +94,37 @@ NSString *API_URL = @"https://api.github.com/user";
     NSString *username = [self.loginTextField text];
     
     NSString *authenticationTokenString = [NSString stringWithFormat:@"%@:%@", username, password];
-    NSData *authenticationTokenData = [authenticationTokenString dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *authenticationTokenStringEncoded = [authenticationTokenData base64EncodedStringWithOptions:0];
+    NSString *authenticationTokenStringEncoded = [self getBase64EncodedString:authenticationTokenString];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:API_URL]];
+    [request setURL:[NSURL URLWithString:@"https://api.github.com/user"]];
     [request setValue:[NSString stringWithFormat:@"Basic %@", authenticationTokenStringEncoded] forHTTPHeaderField:@"Authorization"];
     
     NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithRequest:request completionHandler:signInHandler] resume];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        NSInteger statusCode = [httpResponse statusCode];
+        NSInteger loginSuccessfulCode = 200;
+        NSString *alertViewTitle;
+        NSString *alertViewMessage;
+        if(statusCode == loginSuccessfulCode) {
+            alertViewTitle = @"Congratulate!";
+            alertViewMessage = @"You've logged in successfully";
+        } else {
+            alertViewTitle = @"Sorry!";
+            alertViewMessage = @"Incorrect username or password";
+        }
+        [self showAlertViewWithTitle:alertViewTitle cancelButtonTitle:@"OK" andMessage:alertViewMessage];
+    }] resume];
 }
 
-#pragma mark - URL Session Handler
+#pragma mark - NSString Encode Methods 
 
-void (^signInHandler)(NSData *data, NSURLResponse *response, NSError *error) = ^(NSData *data, NSURLResponse *response, NSError *error) {
-    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-    NSInteger statusCode = [httpResponse statusCode];
-    NSInteger loginSuccessfulCode = 200;
-    
-    NSString *alertViewTitle;
-    NSString *alertViewMessage;
-    if(statusCode == loginSuccessfulCode) {
-        alertViewTitle = @"Congratulate!";
-        alertViewMessage = @"You've logged in successfully";
-    } else {
-        alertViewTitle = @"Sorry!";
-        alertViewMessage = @"Incorrect username or password";
-    }
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertViewTitle message:alertViewMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
-        [alertView release];
-    });
-};
+- (NSString *)getBase64EncodedString:(NSString *)string {
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedString = [data base64EncodedStringWithOptions:0];
+    return encodedString;
+}
 
 #pragma mark - UITextFieldDelegate Methods
 
