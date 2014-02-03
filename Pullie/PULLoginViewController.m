@@ -8,6 +8,7 @@
 
 #import "PULLoginViewController.h"
 #import "UIButton+PullieAdditions.h"
+#import "PULNotificationViewController.h"
 
 
 @interface PULLoginViewController ()
@@ -110,6 +111,9 @@
         if(statusCode == loginSuccessfulCode) {
             alertViewTitle = @"Congratulate!";
             alertViewMessage = @"You've logged in successfully";
+            
+            PULNotificationViewController *notificationViewController = [[PULNotificationViewController alloc] init];
+            [self pushNextViewController:notificationViewController];
         } else {
             alertViewTitle = @"Sorry!";
             alertViewMessage = @"Incorrect username or password";
@@ -118,7 +122,15 @@
     }] resume];
 }
 
-#pragma mark - NSString Encode Methods 
+#pragma mark - Navigation Methods
+
+- (void) pushNextViewController:(UIViewController *)viewController {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:viewController animated:YES];
+    });
+}
+
+#pragma mark - NSString Encode Methods
 
 - (NSString *)base64EncodedString:(NSString *)string {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
