@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2153177189FA7350055CF0F /* PULNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2153176189FA7350055CF0F /* PULNotificationViewController.m */; };
+		E215317E189FAA8A0055CF0F /* PULNotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E215317D189FAA8A0055CF0F /* PULNotificationTableViewCell.m */; };
 		E264526A1898FA3F00C0C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26452691898FA3F00C0C44A /* Foundation.framework */; };
 		E264526C1898FA3F00C0C44A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526B1898FA3F00C0C44A /* CoreGraphics.framework */; };
 		E264526E1898FA3F00C0C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526D1898FA3F00C0C44A /* UIKit.framework */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2153175189FA7350055CF0F /* PULNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULNotificationViewController.h; sourceTree = "<group>"; };
+		E2153176189FA7350055CF0F /* PULNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULNotificationViewController.m; sourceTree = "<group>"; };
+		E215317C189FAA8A0055CF0F /* PULNotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULNotificationTableViewCell.h; sourceTree = "<group>"; };
+		E215317D189FAA8A0055CF0F /* PULNotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULNotificationTableViewCell.m; sourceTree = "<group>"; };
 		E26452661898FA3F00C0C44A /* Pullie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pullie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26452691898FA3F00C0C44A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E264526B1898FA3F00C0C44A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E215317A189FAA400055CF0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E215317B189FAA470055CF0F /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E215317B189FAA470055CF0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E215317C189FAA8A0055CF0F /* PULNotificationTableViewCell.h */,
+				E215317D189FAA8A0055CF0F /* PULNotificationTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		E264525D1898FA3F00C0C44A = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +140,7 @@
 		E264526F1898FA3F00C0C44A /* Pullie */ = {
 			isa = PBXGroup;
 			children = (
+				E215317A189FAA400055CF0F /* Views */,
 				E264529D1899066C00C0C44A /* Categories */,
 				E26452991898FBAF00C0C44A /* View Controllers */,
 				E26452981898FA5800C0C44A /* Application */,
@@ -170,6 +194,8 @@
 			children = (
 				E264529A1898FDB900C0C44A /* PULLoginViewController.h */,
 				E264529B1898FDB900C0C44A /* PULLoginViewController.m */,
+				E2153175189FA7350055CF0F /* PULNotificationViewController.h */,
+				E2153176189FA7350055CF0F /* PULNotificationViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -290,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E215317E189FAA8A0055CF0F /* PULNotificationTableViewCell.m in Sources */,
 				E264529C1898FDB900C0C44A /* PULLoginViewController.m in Sources */,
 				E26452A3189908AF00C0C44A /* UIButton+PullieAdditions.m in Sources */,
 				E264527A1898FA3F00C0C44A /* PULAppDelegate.m in Sources */,
+				E2153177189FA7350055CF0F /* PULNotificationViewController.m in Sources */,
 				E26452761898FA3F00C0C44A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

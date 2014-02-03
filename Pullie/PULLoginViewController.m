@@ -94,7 +94,7 @@
     NSString *username = [self.loginTextField text];
     
     NSString *authenticationTokenString = [NSString stringWithFormat:@"%@:%@", username, password];
-    NSString *authenticationTokenStringEncoded = [self getBase64EncodedString:authenticationTokenString];
+    NSString *authenticationTokenStringEncoded = [self base64EncodedString:authenticationTokenString];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:@"https://api.github.com/user"]];
@@ -120,7 +120,7 @@
 
 #pragma mark - NSString Encode Methods 
 
-- (NSString *)getBase64EncodedString:(NSString *)string {
+- (NSString *)base64EncodedString:(NSString *)string {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSString *encodedString = [data base64EncodedStringWithOptions:0];
     return encodedString;
