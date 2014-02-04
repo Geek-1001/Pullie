@@ -16,6 +16,4 @@
 @property (nonatomic, weak) NSString *content;
 @property (nonatomic, weak) NSString *date;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withUser:(NSString *)user withAction:(NSString *)action withCurrentRepository:(NSString *)repository withContent:(NSString *)content andDate:(NSString *)date;
-
 @end

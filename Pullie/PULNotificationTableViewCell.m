@@ -11,33 +11,9 @@
 @implementation PULNotificationTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-    }
-    return self;
-}
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withUser:(NSString *)user withAction:(NSString *)action withCurrentRepository:(NSString *)repository withContent:(NSString *)content andDate:(NSString *)date {
-    
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        NSString *mainText = [NSString stringWithFormat:@"%@ : %@ - %@", user, action, repository];
-        NSString *detailsText = [NSString stringWithFormat:@"at %@: \n %@", date, content];
-        CGFloat fontSize = 15.5f;
-        
-        [self.textLabel setText:mainText];
-        [self.detailTextLabel setText:detailsText];
-        [self.textLabel setFont:[UIFont fontWithName:@"Alef-Regular" size:fontSize]];
-        
-        /*
-         //TODO: add line break mode for long notifications
-         NSInteger numberOfLine = 0;
-         [self.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
-         [self.textLabel setNumberOfLines:numberOfLine];
-        */
-        
     }
     return self;
 }
@@ -50,11 +26,22 @@
 }
 
 - (void)setNotificationUser:(NSString *)user withAction:(NSString *)action withCurrentRepository:(NSString *)repository withContent:(NSString *)content andDate:(NSString *)date {
-    self.user = user;
-    self.action = action;
-    self.currentRepository = repository;
-    self.content = content;
-    self.date = date;
+    if(self){
+        CGFloat fontSize = 15.5f;
+        NSString *mainText = [NSString stringWithFormat:@"%@ : %@ -  %@", user, action, repository];
+        NSString *detailsText = [NSString stringWithFormat:@"at %@: \n %@", date, content];
+        
+        [self.textLabel setText:mainText];
+        [self.textLabel setFont:[UIFont fontWithName:@"Alef-Regular" size:fontSize]];
+        [self.detailTextLabel setText:detailsText];
+        
+        /*
+         //TODO: add line break mode for long notifications
+         NSInteger numberOfLine = 0;
+         [self.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
+         [self.textLabel setNumberOfLines:numberOfLine];
+        */
+    }
 }
 
 @end
