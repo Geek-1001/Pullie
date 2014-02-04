@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E26452651898FA3F00C0C44A"
                BuildableName = "Pullie.app"
-               BlueprintName = "Pullie"
-               ReferencedContainer = "container:Pullie.xcodeproj">
+               BlueprintName = "Pully"
+               ReferencedContainer = "container:Pully.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E26452801898FA3F00C0C44A"
                BuildableName = "PullieTests.xctest"
-               BlueprintName = "PullieTests"
-               ReferencedContainer = "container:Pullie.xcodeproj">
+               BlueprintName = "PullyTests"
+               ReferencedContainer = "container:Pully.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E26452651898FA3F00C0C44A"
             BuildableName = "Pullie.app"
-            BlueprintName = "Pullie"
-            ReferencedContainer = "container:Pullie.xcodeproj">
+            BlueprintName = "Pully"
+            ReferencedContainer = "container:Pully.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E26452651898FA3F00C0C44A"
             BuildableName = "Pullie.app"
-            BlueprintName = "Pullie"
-            ReferencedContainer = "container:Pullie.xcodeproj">
+            BlueprintName = "Pully"
+            ReferencedContainer = "container:Pully.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E26452651898FA3F00C0C44A"
             BuildableName = "Pullie.app"
-            BlueprintName = "Pullie"
-            ReferencedContainer = "container:Pullie.xcodeproj">
+            BlueprintName = "Pully"
+            ReferencedContainer = "container:Pully.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
