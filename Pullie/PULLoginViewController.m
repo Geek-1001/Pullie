@@ -8,6 +8,7 @@
 
 #import "PULLoginViewController.h"
 #import "UIButton+PullieAdditions.h"
+#import "PULNotificationViewController.h"
 
 
 @interface PULLoginViewController ()
@@ -94,7 +95,7 @@
     NSString *username = [self.loginTextField text];
     
     NSString *authenticationTokenString = [NSString stringWithFormat:@"%@:%@", username, password];
-    NSString *authenticationTokenStringEncoded = [self getBase64EncodedString:authenticationTokenString];
+    NSString *authenticationTokenStringEncoded = [self base64EncodedString:authenticationTokenString];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:@"https://api.github.com/user"]];
@@ -110,6 +111,9 @@
         if(statusCode == loginSuccessfulCode) {
             alertViewTitle = @"Congratulate!";
             alertViewMessage = @"You've logged in successfully";
+            
+            PULNotificationViewController *notificationViewController = [[PULNotificationViewController alloc] init];
+            [self pushNextViewController:notificationViewController];
         } else {
             alertViewTitle = @"Sorry!";
             alertViewMessage = @"Incorrect username or password";
@@ -118,9 +122,17 @@
     }] resume];
 }
 
-#pragma mark - NSString Encode Methods 
+#pragma mark - Navigation Methods
 
-- (NSString *)getBase64EncodedString:(NSString *)string {
+- (void) pushNextViewController:(UIViewController *)viewController {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:viewController animated:YES];
+    });
+}
+
+#pragma mark - NSString Encode Methods
+
+- (NSString *)base64EncodedString:(NSString *)string {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSString *encodedString = [data base64EncodedStringWithOptions:0];
     return encodedString;

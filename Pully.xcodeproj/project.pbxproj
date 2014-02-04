@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2153177189FA7350055CF0F /* PULNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2153176189FA7350055CF0F /* PULNotificationViewController.m */; };
+		E215317E189FAA8A0055CF0F /* PULNotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E215317D189FAA8A0055CF0F /* PULNotificationTableViewCell.m */; };
 		E264526A1898FA3F00C0C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26452691898FA3F00C0C44A /* Foundation.framework */; };
 		E264526C1898FA3F00C0C44A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526B1898FA3F00C0C44A /* CoreGraphics.framework */; };
 		E264526E1898FA3F00C0C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E264526D1898FA3F00C0C44A /* UIKit.framework */; };
@@ -36,20 +38,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E26452661898FA3F00C0C44A /* Pullie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pullie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2153175189FA7350055CF0F /* PULNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULNotificationViewController.h; sourceTree = "<group>"; };
+		E2153176189FA7350055CF0F /* PULNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULNotificationViewController.m; sourceTree = "<group>"; };
+		E215317C189FAA8A0055CF0F /* PULNotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULNotificationTableViewCell.h; sourceTree = "<group>"; };
+		E215317D189FAA8A0055CF0F /* PULNotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULNotificationTableViewCell.m; sourceTree = "<group>"; };
+		E26452661898FA3F00C0C44A /* Pully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26452691898FA3F00C0C44A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E264526B1898FA3F00C0C44A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E264526D1898FA3F00C0C44A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E26452711898FA3F00C0C44A /* Pullie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pullie-Info.plist"; sourceTree = "<group>"; };
+		E26452711898FA3F00C0C44A /* Pully-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pully-Info.plist"; sourceTree = "<group>"; };
 		E26452731898FA3F00C0C44A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E26452751898FA3F00C0C44A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E26452771898FA3F00C0C44A /* Pullie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pullie-Prefix.pch"; sourceTree = "<group>"; };
+		E26452771898FA3F00C0C44A /* Pully-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pully-Prefix.pch"; sourceTree = "<group>"; };
 		E26452781898FA3F00C0C44A /* PULAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PULAppDelegate.h; sourceTree = "<group>"; };
 		E26452791898FA3F00C0C44A /* PULAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PULAppDelegate.m; sourceTree = "<group>"; };
 		E264527B1898FA3F00C0C44A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E26452811898FA3F00C0C44A /* PullieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26452811898FA3F00C0C44A /* PullyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26452821898FA3F00C0C44A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E264528A1898FA3F00C0C44A /* PullieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PullieTests-Info.plist"; sourceTree = "<group>"; };
+		E264528A1898FA3F00C0C44A /* PullyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PullyTests-Info.plist"; sourceTree = "<group>"; };
 		E264528C1898FA3F00C0C44A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E264528E1898FA3F00C0C44A /* PullieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullieTests.m; sourceTree = "<group>"; };
 		E264529A1898FDB900C0C44A /* PULLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULLoginViewController.h; sourceTree = "<group>"; };
@@ -84,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E215317A189FAA400055CF0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E215317B189FAA470055CF0F /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E215317B189FAA470055CF0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E215317C189FAA8A0055CF0F /* PULNotificationTableViewCell.h */,
+				E215317D189FAA8A0055CF0F /* PULNotificationTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		E264525D1898FA3F00C0C44A = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +120,8 @@
 		E26452671898FA3F00C0C44A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E26452661898FA3F00C0C44A /* Pullie.app */,
-				E26452811898FA3F00C0C44A /* PullieTests.xctest */,
+				E26452661898FA3F00C0C44A /* Pully.app */,
+				E26452811898FA3F00C0C44A /* PullyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +140,7 @@
 		E264526F1898FA3F00C0C44A /* Pullie */ = {
 			isa = PBXGroup;
 			children = (
+				E215317A189FAA400055CF0F /* Views */,
 				E264529D1899066C00C0C44A /* Categories */,
 				E26452991898FBAF00C0C44A /* View Controllers */,
 				E26452981898FA5800C0C44A /* Application */,
@@ -130,10 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				E26452A918991F2200C0C44A /* Fonts */,
-				E26452711898FA3F00C0C44A /* Pullie-Info.plist */,
+				E26452711898FA3F00C0C44A /* Pully-Info.plist */,
 				E26452721898FA3F00C0C44A /* InfoPlist.strings */,
 				E26452751898FA3F00C0C44A /* main.m */,
-				E26452771898FA3F00C0C44A /* Pullie-Prefix.pch */,
+				E26452771898FA3F00C0C44A /* Pully-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,7 +174,7 @@
 		E26452891898FA3F00C0C44A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E264528A1898FA3F00C0C44A /* PullieTests-Info.plist */,
+				E264528A1898FA3F00C0C44A /* PullyTests-Info.plist */,
 				E264528B1898FA3F00C0C44A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -170,6 +194,8 @@
 			children = (
 				E264529A1898FDB900C0C44A /* PULLoginViewController.h */,
 				E264529B1898FDB900C0C44A /* PULLoginViewController.m */,
+				E2153175189FA7350055CF0F /* PULNotificationViewController.h */,
+				E2153176189FA7350055CF0F /* PULNotificationViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -195,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E26452651898FA3F00C0C44A /* Pullie */ = {
+		E26452651898FA3F00C0C44A /* Pully */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E26452921898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "Pullie" */;
+			buildConfigurationList = E26452921898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "Pully" */;
 			buildPhases = (
 				E26452621898FA3F00C0C44A /* Sources */,
 				E26452631898FA3F00C0C44A /* Frameworks */,
@@ -207,14 +233,14 @@
 			);
 			dependencies = (
 			);
-			name = Pullie;
+			name = Pully;
 			productName = Pullie;
-			productReference = E26452661898FA3F00C0C44A /* Pullie.app */;
+			productReference = E26452661898FA3F00C0C44A /* Pully.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E26452801898FA3F00C0C44A /* PullieTests */ = {
+		E26452801898FA3F00C0C44A /* PullyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E26452951898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "PullieTests" */;
+			buildConfigurationList = E26452951898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "PullyTests" */;
 			buildPhases = (
 				E264527D1898FA3F00C0C44A /* Sources */,
 				E264527E1898FA3F00C0C44A /* Frameworks */,
@@ -225,9 +251,9 @@
 			dependencies = (
 				E26452871898FA3F00C0C44A /* PBXTargetDependency */,
 			);
-			name = PullieTests;
+			name = PullyTests;
 			productName = PullieTests;
-			productReference = E26452811898FA3F00C0C44A /* PullieTests.xctest */;
+			productReference = E26452811898FA3F00C0C44A /* PullyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +271,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E26452611898FA3F00C0C44A /* Build configuration list for PBXProject "Pullie" */;
+			buildConfigurationList = E26452611898FA3F00C0C44A /* Build configuration list for PBXProject "Pully" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -257,8 +283,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E26452651898FA3F00C0C44A /* Pullie */,
-				E26452801898FA3F00C0C44A /* PullieTests */,
+				E26452651898FA3F00C0C44A /* Pully */,
+				E26452801898FA3F00C0C44A /* PullyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E215317E189FAA8A0055CF0F /* PULNotificationTableViewCell.m in Sources */,
 				E264529C1898FDB900C0C44A /* PULLoginViewController.m in Sources */,
 				E26452A3189908AF00C0C44A /* UIButton+PullieAdditions.m in Sources */,
 				E264527A1898FA3F00C0C44A /* PULAppDelegate.m in Sources */,
+				E2153177189FA7350055CF0F /* PULNotificationViewController.m in Sources */,
 				E26452761898FA3F00C0C44A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +338,7 @@
 /* Begin PBXTargetDependency section */
 		E26452871898FA3F00C0C44A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E26452651898FA3F00C0C44A /* Pullie */;
+			target = E26452651898FA3F00C0C44A /* Pully */;
 			targetProxy = E26452861898FA3F00C0C44A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -414,9 +442,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
-				INFOPLIST_FILE = "Pullie/Pullie-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Pullie/Pully-Prefix.pch";
+				INFOPLIST_FILE = "Pullie/Pully-Info.plist";
+				PRODUCT_NAME = Pully;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,9 +456,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
-				INFOPLIST_FILE = "Pullie/Pullie-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Pullie/Pully-Prefix.pch";
+				INFOPLIST_FILE = "Pullie/Pully-Info.plist";
+				PRODUCT_NAME = Pully;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -451,8 +479,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PullieTests/PullieTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PullieTests/PullyTests-Info.plist";
+				PRODUCT_NAME = PullyTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -470,8 +498,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pullie/Pullie-Prefix.pch";
-				INFOPLIST_FILE = "PullieTests/PullieTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PullieTests/PullyTests-Info.plist";
+				PRODUCT_NAME = PullyTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -480,7 +508,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E26452611898FA3F00C0C44A /* Build configuration list for PBXProject "Pullie" */ = {
+		E26452611898FA3F00C0C44A /* Build configuration list for PBXProject "Pully" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E26452901898FA3F00C0C44A /* Debug */,
@@ -489,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E26452921898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "Pullie" */ = {
+		E26452921898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "Pully" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E26452931898FA3F00C0C44A /* Debug */,
@@ -498,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E26452951898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "PullieTests" */ = {
+		E26452951898FA3F00C0C44A /* Build configuration list for PBXNativeTarget "PullyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E26452961898FA3F00C0C44A /* Debug */,
